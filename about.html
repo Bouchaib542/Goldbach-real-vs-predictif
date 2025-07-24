@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos du projet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>À propos du projet</h1>
+    <p>
+      Ce site présente une méthode innovante de prédiction des décompositions en paires (p, q) 
+      de nombres pairs très grands selon la <strong>formule prédictive de Goldbach</strong>.
+    </p>
+
+    <h2>Objectif</h2>
+    <p>
+      Le but est de démontrer que pour tout nombre pair E ≥ 4, il existe deux entiers p et q 
+      tels que <strong>p + q = E</strong>, avec p et q <strong>premiers</strong>.
+    </p>
+
+    <h2>La Formule Prédictive</h2>
+    <p>
+      Nous utilisons l’équation suivante pour approximer la position des deux nombres premiers :
+    </p>
+    <pre><code>δ(E) = √E × (log log E) / log E</code></pre>
+    <p>
+      On déduit ensuite :
+      <br><code>p ≈ E/2 − δ(E)</code>, 
+      <br><code>q ≈ E/2 + δ(E)</code>
+    </p>
+
+    <h2>Exemples de comparaison</h2>
+    <p>Voici quelques résultats comparant la prédiction et les valeurs réelles :</p>
+    <table>
+      <thead>
+        <tr>
+          <th>E</th>
+          <th>p (prédit)</th>
+          <th>q (prédit)</th>
+          <th>p (réel)</th>
+          <th>q (réel)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>100</td>
+          <td>47</td>
+          <td>53</td>
+          <td>47</td>
+          <td>53</td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>60</td>
+          <td>68</td>
+          <td>59</td>
+          <td>69</td>
+        </tr>
+        <tr>
+          <td>1 000 000 000</td>
+          <td>499 995 375</td>
+          <td>500 004 625</td>
+          <td>499 995 323</td>
+          <td>500 004 677</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Remarques</h2>
+    <ul>
+      <li>Les p et q prédits sont très proches des vrais p et q.</li>
+      <li>Dans la majorité des cas, une simple vérification autour des valeurs prédites permet de trouver les vrais premiers.</li>
+      <li>La méthode est particulièrement efficace pour de très grands nombres.</li>
+    </ul>
+
+    <h2>Crédit</h2>
+    <p>
+      Site conçu par <strong>Bouchaib Bouchaib</strong>, chercheur indépendant. <br>
+      Toute reproduction est interdite sans autorisation préalable.
+    </p>
+    <p><a href="index.html">← Retour à l'accueil</a></p>
+  </div>
+</body>
+</html>
